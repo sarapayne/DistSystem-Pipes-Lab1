@@ -18,7 +18,7 @@ namespace PipesAndFilters
         {
             Users = new List<User>();
             Users.Add(new User() { ID = 1, Name = "Test User" });
-            OutgoingPipe = new Pipe();//where is the filter which is required by the constructor?
+            IncomingPipe = new Pipe();//where is the filter which is required by the constructor?
             OutgoingPipe = new Pipe();//where is the filter which is required by the constructor?
             IncomingPipe.RegisterFilter(new AuthenticateFilter());
             IncomingPipe.RegisterFilter(new TranslateFilter());

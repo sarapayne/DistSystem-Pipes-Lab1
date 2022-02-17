@@ -10,7 +10,7 @@ namespace PipesAndFilters.Filters
         {
             if (message.Headers.ContainsKey("RequestFormat"))
             {
-                switch (message.Headers["requestFormat"])
+                switch (message.Headers["RequestFormat"])
                 {
                     case "Bytes":
                         string[] byteStrings = message.Body.Split('-');
