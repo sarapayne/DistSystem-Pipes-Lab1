@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
+using PipesAndFilters.Filters;
 using PipesAndFilters.Messages;
-
 namespace PipesAndFilters
 {
     class Program
@@ -18,6 +18,7 @@ namespace PipesAndFilters
         int userId = 1;
         public void RequestHello()
         {
+            
             IMessage message = new Message(); //where is headers supposed to come from or should there also be an empty constructor?
 
             // Add the user ID header

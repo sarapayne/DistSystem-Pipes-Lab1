@@ -9,23 +9,29 @@ namespace PipesAndFilters.Filters
         {
             if (message.Headers.ContainsKey("RequestFormat"))
             {
-                byte[] bytes = Encoding.ASCII.GetBytes(message.Body);
-                string asciiString = "";
-                for (int i = 0; i < bytes.Length; i++)
+                switch (message.Headers["requestFormat"])
                 {
-                    asciiString += bytes[i].ToString();
-                    if (i + 1 < bytes.Length)
-                    {
-                        asciiString += "-";
-                    }
+                    case "Bytes":
+                        
+                        break;
+                    default:
+                        break;
                 }
-                message.Body = asciiString;
             }
 
-            if (message.Headers.ContainsKey("ResponseFormat"))
+            else if (message.Headers.ContainsKey("ResponseFormat"))
             {
-                //how do we know the potential formats? Therefore how is this done?
+                switch (message.Headers["ResponseFormat"]
+                {
+                    case "Bytes":
+                        
+                        break;
+                    default:
+                        break;
+                }
             }
+            
+            
 
             return message;
         }

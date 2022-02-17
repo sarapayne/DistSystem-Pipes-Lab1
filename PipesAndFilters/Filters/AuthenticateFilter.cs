@@ -9,8 +9,10 @@ namespace PipesAndFilters.Filters
         {
             if (message.Headers.ContainsKey("User"))
             {
-                //add code here
-                //where does an integer value come from?
+                if (int.TryParse(message.Headers["User"], out int id))
+                {
+                    ServerEnvironment.SetCurrentUser(id);
+                }
             }
 
             return message;
