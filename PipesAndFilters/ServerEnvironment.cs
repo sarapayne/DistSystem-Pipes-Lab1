@@ -47,7 +47,7 @@ namespace PipesAndFilters
 
             // 2. Send the message to the endpoint
             HelloWorldEndpoint endpoint = new HelloWorldEndpoint();
-            message = endpoint.Execute(message);
+            message = endpoint.Execute(message); //help here
 
             // 3. Send the message through the outgoing pipeline
             message = OutgoingPipe.ProcessMessage(message);

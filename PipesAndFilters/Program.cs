@@ -18,7 +18,7 @@ namespace PipesAndFilters
         int userId = 1;
         public void RequestHello()
         {
-            IMessage message = new Message();
+            IMessage message = new Message(); //where is headers supposed to come from or should there also be an empty constructor?
 
             // Add the user ID header
             message.Headers.Add("User", userId.ToString());

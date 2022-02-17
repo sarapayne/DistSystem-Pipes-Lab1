@@ -10,8 +10,10 @@ namespace PipesAndFilters.Filters
             if (message.Headers.ContainsKey("User"))
             {
                 //add code here
+                //where does an integer value come from?
             }
-            throw new System.NotImplementedException();
+
+            return message;
         }
     }
 }
