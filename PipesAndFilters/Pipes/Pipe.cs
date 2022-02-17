@@ -8,9 +8,9 @@ namespace PipesAndFilters.Pipes
     {
         private List<IFilter> _filters;
 
-        public Pipe(List<IFilter> filters)
+        public Pipe()
         {
-            _filters = filters;
+            _filters = new List<IFilter>();
         }
         
         public void RegisterFilter(IFilter filter)
@@ -20,13 +20,12 @@ namespace PipesAndFilters.Pipes
 
         public IMessage ProcessMessage(IMessage message)
         {
-            IMessage finalMessage = null;
             for (int index = 0; index < _filters.Count; index++)
             {
-                finalMessage = _filters[index].Run(message);
+               _filters[index].Run(message);
             }
 
-            return finalMessage;
+            return message;
         }
     }
 }
