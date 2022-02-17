@@ -41,7 +41,7 @@ namespace PipesAndFilters.Clients
             bytes = new byte[byteStrings.Length];
             for (int i = 0; i < byteStrings.Length; i++)
             {
-                bytes[i] = Convert.ToByte(byteStrings[i], 16);
+                bytes[i] = Convert.ToByte(byteStrings[i], 2);
             }
             responseBody = Encoding.ASCII.GetString(bytes);
 

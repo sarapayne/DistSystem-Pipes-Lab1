@@ -10,7 +10,7 @@ namespace PipesAndFilters
         static void Main(string[] args)
         {
             ServerEnvironment.Setup();
-            IClient client = ClientFactory.GetClient("Hex");
+            IClient client = ClientFactory.GetClient("Binary");
             client.RequestHello();
         }
     }
