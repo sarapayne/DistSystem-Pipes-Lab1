@@ -15,7 +15,7 @@ namespace PipesAndFilters.Clients
             message.Headers.Add("User", userId.ToString());
 
             // Convert the message to a byte array and then turn the byte array into a string of byte values delimited by dashes
-            message.Headers.Add("RequestFormat", "Bytes");
+            message.Headers.Add("RequestFormat", "Hex");
             byte[] bytes = Encoding.ASCII.GetBytes("Request Message");
             string requestBody = "";
             for (int i = 0; i < bytes.Length; i++)
