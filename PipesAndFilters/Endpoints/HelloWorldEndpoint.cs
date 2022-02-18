@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using PipesAndFilters.Messages;
+﻿using PipesAndFilters.Messages;
 
-namespace PipesAndFilters
+namespace PipesAndFilters.Endpoints
 {
     public class HelloWorldEndpoint
     {

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using PipesAndFilters.Endpoints;
 using PipesAndFilters.Filters;
 using PipesAndFilters.Messages;
 using PipesAndFilters.Pipes;
