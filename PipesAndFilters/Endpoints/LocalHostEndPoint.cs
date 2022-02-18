@@ -1,8 +1,8 @@
-﻿using PipesAndFilters.Messages;
+using PipesAndFilters.Messages;
 
 namespace PipesAndFilters.Endpoints
 {
-    public class HelloWorldEndpoint : IEndPoint
+    public class LocalHostEndPoint :IEndPoint
     {
         public IMessage Execute(IMessage message)
         {

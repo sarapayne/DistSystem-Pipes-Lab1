@@ -50,7 +50,7 @@ namespace PipesAndFilters
             message = IncomingPipe.ProcessMessage(message);
 
             // 2. Send the message to the endpoint
-            HelloWorldEndpoint endpoint = new HelloWorldEndpoint();
+            IEndPoint endpoint = EndPointFactory.GetEndpoint(message.Headers["endPoint"]);
             message = endpoint.Execute(message); //help here
 
             // 3. Send the message through the outgoing pipeline
