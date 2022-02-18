@@ -10,7 +10,10 @@ namespace PipesAndFilters.Clients
         public void RequestHello()
         {
             IMessage message = new Message(); //where is headers supposed to come from or should there also be an empty constructor?
-
+            
+            //add endpoint
+            message.Headers.Add("EndPoint", "Default");
+            
             // Add the user ID header
             message.Headers.Add("User", userId.ToString());
 

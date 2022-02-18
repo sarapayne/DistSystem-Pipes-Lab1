@@ -15,6 +15,9 @@ namespace PipesAndFilters
         private static IPipe IncomingPipe { get; set; }
         private static IPipe OutgoingPipe { get; set; }
 
+        private static Dictionary<string, IEndPoint> EndPoints { get; set; }
+
+       
         public static void Setup()
         {
             Users = new List<User>();
